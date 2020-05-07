@@ -1,91 +1,60 @@
-body {
-  font-family: "Source Serif Pro";
-  font-size: 18px;
-  line-height: 26px;
-  color: #333;
-  margin: 0;
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
 }
 
-.article-header {
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-  padding: 0 10px;
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.article-header__hed {
-  font-family: "Roboto Slab";
-  font-size: 36px;
-  line-height: 40px;
-  margin-bottom: 10px;
+p {
+    line-height: 1.5em;
 }
 
-.article-header__dek {
-  font-family: "Roboto";
-  font-size: 17px;
-  line-height: 23px;
-  color: #666;
-  margin-bottom: 20px;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.article-header__leadart {
-  margin-bottom: 20px;
-}
-.article-header__leadart__img {
-  width: 100%;
+.container.photo {
+    padding: 0;
+    position: relative;
 }
 
-.article-header__leadart__caption {
-  font-family: "Roboto";
-  font-size: 13px;
-  line-height: 16px;
-  color: #999;
-  margin-top: 0;
+img {
+    width: 100%;
 }
 
-.article-header__byline {
-  font-style: italic;
-  font-weight: light;
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
 }
 
-.article-header__pubdate {
-  color: #666;
-  font-size: 14px;
-  font-family: "Roboto";
-}
-
-.article-photo {
-  max-width: 720px;
-  margin: auto;
-}
-
-.photo {
-  width: 100%;
-}
-
-.photo-caption {
-  font-family: "Open Sans";
-  font-size: 13px;
-  margin: 0;
-}
-
-.g-copy {
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-  padding: 0 10px;
-}
-
-.g-chart {
-  max-width: 600px;
-  margin: 0 auto 10px auto;
-  padding: 0 10px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  color: #0080c3;
-}
-
-a:hover {
-  text-decoration: underline;
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
 }
